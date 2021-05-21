@@ -1,9 +1,9 @@
 const BiswapFactory = artifacts.require("BiswapFactory");
 
 module.exports = async function (deployer) {
-  await deployer.deploy(BiswapFactory, '0xBF693dA185Ed1D2B78A490ac0926E1df183561B3');
+  await deployer.deploy(BiswapFactory, '0xdBE55A0daDc80EF88e884f15CE41c26c0Af933a0');
   let instance = await BiswapFactory.deployed();
-  await instance.setFeeTo("0x2184Caa4cFFe56A9d5aCc6D063920e7C6b56b2EB");
+  await instance.setFeeTo("0x3ea3016aa9e3faaD871AA45232055a424b00bFC1");
   let res = await instance.feeTo.call();
   console.log('fee - ', res)
 
