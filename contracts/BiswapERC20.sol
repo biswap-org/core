@@ -6,8 +6,8 @@ import './libraries/SafeMath.sol';
 contract BiswapERC20 is IBiswapERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'Biswap';
-    string public constant symbol = 'LP';
+    string public constant name = 'Biswap LPs';
+    string public constant symbol = 'BSW-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
