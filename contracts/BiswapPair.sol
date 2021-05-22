@@ -72,14 +72,14 @@ contract BiswapPair is IBiswapPair, BiswapERC20 {
     }
 
     function setSwapFee(uint32 _swapFee) external {
-        require(_swapFee <= 0, "BiswapPair: lower then 0");
+        require(_swapFee > 0, "BiswapPair: lower then 0");
         require(msg.sender == factory, 'BiswapPair: FORBIDDEN');
         require(_swapFee <= 1000, 'BiswapPair: FORBIDDEN_FEE');
         swapFee = _swapFee;
     }
     
     function setDevFee(uint32 _devFee) external {
-        require(_devFee <= 0, "BiswapPair: lower then 0");
+        require(_devFee > 0, "BiswapPair: lower then 0");
         require(msg.sender == factory, 'BiswapPair: FORBIDDEN');
         require(_devFee <= 500, 'BiswapPair: FORBIDDEN_FEE');
         devFee = _devFee;
